@@ -1,5 +1,5 @@
 Usage: ./script.sh
 Make sure loading the right Compilers
-stream_cpu.c and stream_gpu.c contains slightly modified versions published in http://www.cs.virginia.edu/stream/ref.html  by John D. McCalpin and Joe R. Zagar
-essentials a innerloop was added to reduce the impact of data distribution by openMP and timer granularity (very effective on stream_cpu.c in L2-Cache Area)
+stream_cpu.c and stream_gpu.c contain slightly modified versions published in http://www.cs.virginia.edu/stream/ref.html  by John D. McCalpin and Joe R. Zagar
+essentially a innerloop was added to reduce the impact of data distribution by openMP and timer granularity (very effective on stream_cpu.c in L2-Cache Area)
 still performs poorly on L1-Cache Date-Sizes 
