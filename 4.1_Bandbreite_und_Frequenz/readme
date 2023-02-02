@@ -1,0 +1,12 @@
+1. cd Benchit_membench Branch
+2. nano LOCALDEFS/"System_Name"
+	BENCHIT_RUN_ACCURACY=2
+2. Pfad: /kernel/arch_x86-64/memory_latency/C/pthread/0/read/
+3. Adjust PARAMETER FILE according to "4.1_throughput_Parameter_file" 
+4. Set "BENCHIT_KERNEL_CPU_LIST"
+	P_Core: "0"
+	E_Core: "23"
+	P_Cores: "0-15"
+	E_Cores: "16-23"
+
+5. Adjust Uncore and Core Frequency for each Run (recommend using a script)

@@ -1,0 +1,21 @@
+
+insert "read" and "max" folders at Path "benchit_folder"/kernel/arch_x86-64/memory_latency/C/pthread/0/
+max:
+is beeing used in Diagram 4.7 of the Thesis
+contains a slightly modified version of the Kernel that is using the maximum latency of 14 Internal Runs
+The Effect beeing shown in Diagram 4.7 is beeing !reduced! by using the maximum. That is to ensure that it 
+is not caused by some outliers (with low latency) 
+Helps to flatten the curve and getting more consistent results
+BENCHIT_RUN_ACCURACY 0 (but using 14 internal Runs as seen in the PARAMETER FILE)
+
+read: 
+used in Diagram 4.5 and 4.6 the effect decribed in 4.7 will be exaggerated
+in order to use the results it is recommended to use the median of one Cache-level
+BENCHIT_KERNEL_CPU_LIST settings: 
+	P_Core: "0,2,15,23"
+	E_Core: "16,17,23,0"
+BENCHIT_KERNEL_USE_MODE="E"
+BENCHIT_KERNEL_FLUSH_MODE="I" obviously needs to get changed when setting BENCHIT_KERNEL_USE_MODE to "I"
+
+setting BENCHIT_KERNEL_L(1-4)_SIZE is recommended when using  BENCHIT_KERNEL_FLUSH_(L1-L4)=1 for better results
+Warning: flushing Cache-Level is not necessarily an indication of the actual capacity of the Cache-Level or/and Inclusion Behaviour
